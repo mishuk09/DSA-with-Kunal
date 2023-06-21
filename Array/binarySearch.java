@@ -2,11 +2,31 @@ package Array;
 
 public class binarySearch {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5, 5667, 778, 8 };
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12, 13,14,15 };
+        int target = 9;
+        int result = BinarySearch(arr, target);
+        System.out.println(result);
+
+    }
+
+    static int BinarySearch(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            // find the mid element
+            int mid = start +(end - start) / 2;
+            if (target < arr[mid]) {
+                end = mid - 1;
+            } else if (target > arr[mid]) {
+                start = mid + 1;
+
+            } else {
+                return mid;
+            }
+
         }
-        System.out.println();
+        return -1;
     }
 
 }
