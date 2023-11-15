@@ -1,7 +1,8 @@
 package Array.SelectionSort;
 
 public class selectionsort {
-    //time complexity of this algoritham is O(n2)
+    // time complexity of this algoritham is O(n2)
+    // Space complexity is O(1)
 
     public static void main(String[] args) {
         int arr[] = { 5, 4, 6, 2, 8, 17, 1 };
